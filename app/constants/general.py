@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
+import streamlit as st
 import os
 # Define el background de la app
 BACKGROUND_COLOR = """
@@ -139,10 +140,8 @@ SOB_PROYECTO_DEFECTO = 0.48
 
 # Cargar variables de entorno desde .env
 load_dotenv()
-farm_key = os.getenv('CLIENTE')
+farm_key = st.secrets["API_KEY"]
 
-# Obtener el valor de la variable de entorno 'APP_ENV', y usar 'development' como valor por defecto
-app_env = os.getenv('CLIENTE', 'NATURISA')
 FARMS = None
 if farm_key == "NATURISA":
     FARMS = ("CAMARONES NATURISA", "CAMINO REAL", "MARCHENA")
