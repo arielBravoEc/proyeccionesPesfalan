@@ -134,10 +134,6 @@ TABLE_STYLE = {
     }
 
 
-DIAS_PROYECTO_DEFECTO =  83
-SOB_PROYECTO_DEFECTO = 0.48
-
-
 # Cargar variables de entorno desde .env
 load_dotenv()
 farm_key = st.secrets["CLIENTE"]
@@ -149,3 +145,13 @@ elif farm_key == "PESFALAN":
     FARMS = ("AGLIPESCA", "AGLIPESCA SUR", "MATORRILLOS", "PESFABU", "PESFABUELE", "PROCAM")
 else:
     FARMS = ("CAMARONES NATURISA", "CAMINO REAL", "MARCHENA")
+
+DIAS_PROYECTO_DEFECTO =  83
+SOB_PROYECTO_DEFECTO = 0.48
+
+if farm_key == "NATURISA":
+    DIAS_PROYECTO_DEFECTO =  83
+    SOB_PROYECTO_DEFECTO = 0.48
+elif farm_key == "PESFALAN":
+    DIAS_PROYECTO_DEFECTO =  68
+    SOB_PROYECTO_DEFECTO = 0.71
