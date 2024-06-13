@@ -140,7 +140,7 @@ SOB_PROYECTO_DEFECTO = 0.48
 
 # Cargar variables de entorno desde .env
 load_dotenv()
-farm_key = st.secrets["API_KEY"]
+farm_key = st.secrets["CLIENTE"]
 
 FARMS = None
 if farm_key == "NATURISA":
